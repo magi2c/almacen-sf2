@@ -102,4 +102,9 @@ class Seccion
     {
         return $this->categorias;
     }
+
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 }

@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use M2c\AlmacenBundle\Entity\Caja;
 use M2c\AlmacenBundle\Form\CajaType;
+use M2c\AlmacenBundle\Form\CajaFilterType;
 
 /**
  * Caja controller.
@@ -19,12 +20,22 @@ class CajaController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $peticion = $this->getRequest();
 
-        $entities = $em->getRepository('AlmacenBundle:Caja')->findAll();
+        if ($peticion->getMethod() == 'POST') {
+
+
+            $em = $this->getDoctrine()->getManager();
+
+            $entities = $em->getRepository('AlmacenBundle:Caja')->findAll();
+
+        //filter
+        $form_filter   = $this->createForm(new CajaFilterType());
+        }
 
         return $this->render('AlmacenBundle:Caja:index.html.twig', array(
             'entities' => $entities,
+            'form_filter'   => $form_filter->createView()
         ));
     }
 

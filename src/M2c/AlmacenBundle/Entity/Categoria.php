@@ -103,4 +103,9 @@ class Categoria
     {
         return $this->secciones;
     }
+
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 }

@@ -178,4 +178,9 @@ class Caja
     {
         return $this->categoria;
     }
+
+    public function __toString()
+    {
+        return $this->getReferencia();
+    }
 }

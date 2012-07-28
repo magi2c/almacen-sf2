@@ -44,4 +44,15 @@
         </a>
     </li>
 </ul>
+
+
+<form action="{{ path('almacen_caja') }}" method="post" {{ form_enctype(form_filter) }}>
+    {{ form_widget(form_filter) }}
+    <p>
+        <button type="submit">Find</button>
+    </p>
+</form>
+
+
+
 {% endblock %}
