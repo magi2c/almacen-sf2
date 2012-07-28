@@ -1,0 +1,30 @@
+almacen_caja:
+    pattern:  /
+    defaults: { _controller: "AlmacenBundle:Caja:index" }
+
+almacen_caja_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlmacenBundle:Caja:show" }
+
+almacen_caja_new:
+    pattern:  /new
+    defaults: { _controller: "AlmacenBundle:Caja:new" }
+
+almacen_caja_create:
+    pattern:  /create
+    defaults: { _controller: "AlmacenBundle:Caja:create" }
+    requirements: { _method: post }
+
+almacen_caja_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlmacenBundle:Caja:edit" }
+
+almacen_caja_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlmacenBundle:Caja:update" }
+    requirements: { _method: post }
+
+almacen_caja_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlmacenBundle:Caja:delete" }
+    requirements: { _method: post }

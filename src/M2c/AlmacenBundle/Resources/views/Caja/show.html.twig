@@ -1,0 +1,45 @@
+<h1>Caja</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Referencia</th>
+            <td>{{ entity.referencia }}</td>
+        </tr>
+        <tr>
+            <th>Base</th>
+            <td>{{ entity.base }}</td>
+        </tr>
+        <tr>
+            <th>Ancho</th>
+            <td>{{ entity.ancho }}</td>
+        </tr>
+        <tr>
+            <th>Alto</th>
+            <td>{{ entity.alto }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('almacen_caja') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('almacen_caja_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('almacen_caja_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

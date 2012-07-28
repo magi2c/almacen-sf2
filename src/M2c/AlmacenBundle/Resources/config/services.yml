@@ -1,0 +1,7 @@
+parameters:
+#    almacen.example.class: M2c\AlmacenBundle\Example
+
+services:
+#    almacen.example:
+#        class: %almacen.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

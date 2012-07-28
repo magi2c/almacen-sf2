@@ -1,0 +1,15 @@
+AlmacenBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AlmacenBundle:Default:index }
+
+AlmacenBundle_almacen_caja:
+    resource: "@AlmacenBundle/Resources/config/routing/caja.yml"
+    prefix:   /almacen/caja
+
+AlmacenBundle_almacen_seccion:
+    resource: "@AlmacenBundle/Resources/config/routing/seccion.yml"
+    prefix:   /almacen/seccion
+
+AlmacenBundle_almacen_categoria:
+    resource: "@AlmacenBundle/Resources/config/routing/categoria.yml"
+    prefix:   /almacen/categoria

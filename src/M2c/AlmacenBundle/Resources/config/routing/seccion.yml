@@ -1,0 +1,30 @@
+almacen_seccion:
+    pattern:  /
+    defaults: { _controller: "AlmacenBundle:Seccion:index" }
+
+almacen_seccion_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlmacenBundle:Seccion:show" }
+
+almacen_seccion_new:
+    pattern:  /new
+    defaults: { _controller: "AlmacenBundle:Seccion:new" }
+
+almacen_seccion_create:
+    pattern:  /create
+    defaults: { _controller: "AlmacenBundle:Seccion:create" }
+    requirements: { _method: post }
+
+almacen_seccion_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlmacenBundle:Seccion:edit" }
+
+almacen_seccion_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlmacenBundle:Seccion:update" }
+    requirements: { _method: post }
+
+almacen_seccion_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlmacenBundle:Seccion:delete" }
+    requirements: { _method: post }

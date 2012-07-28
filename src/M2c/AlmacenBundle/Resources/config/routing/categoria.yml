@@ -1,0 +1,30 @@
+almacen_categoria:
+    pattern:  /
+    defaults: { _controller: "AlmacenBundle:Categoria:index" }
+
+almacen_categoria_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AlmacenBundle:Categoria:show" }
+
+almacen_categoria_new:
+    pattern:  /new
+    defaults: { _controller: "AlmacenBundle:Categoria:new" }
+
+almacen_categoria_create:
+    pattern:  /create
+    defaults: { _controller: "AlmacenBundle:Categoria:create" }
+    requirements: { _method: post }
+
+almacen_categoria_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AlmacenBundle:Categoria:edit" }
+
+almacen_categoria_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AlmacenBundle:Categoria:update" }
+    requirements: { _method: post }
+
+almacen_categoria_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AlmacenBundle:Categoria:delete" }
+    requirements: { _method: post }
