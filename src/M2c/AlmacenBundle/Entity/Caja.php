@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * M2c\AlmacenBundle\Entity\Caja
  *
  * @ORM\Table()
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="M2c\AlmacenBundle\Entity\CajaRepository")
  */
 class Caja
 {

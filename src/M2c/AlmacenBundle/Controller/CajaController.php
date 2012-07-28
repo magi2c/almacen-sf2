@@ -23,15 +23,17 @@ class CajaController extends Controller
         $peticion = $this->getRequest();
 
         if ($peticion->getMethod() == 'POST') {
+            $filter_arr =  $peticion->request->get('m2c_almacenbundle_cajafiltertype');
+        }
 
 
-            $em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
+        $entities = $em->getRepository('AlmacenBundle:Caja')->findAllByFilters($filter_arr);
 
-            $entities = $em->getRepository('AlmacenBundle:Caja')->findAll();
 
         //filter
-        $form_filter   = $this->createForm(new CajaFilterType());
-        }
+        $form_filter   = $this->createForm(new CajaFilterType(), $filter_arr);
+
 
         return $this->render('AlmacenBundle:Caja:index.html.twig', array(
             'entities' => $entities,
