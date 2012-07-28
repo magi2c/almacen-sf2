@@ -183,4 +183,16 @@ class Caja
     {
         return $this->getReferencia();
     }
+
+
+    /**
+     * Get volumen
+     *
+     * @return decimal
+     */
+    public function getVolumen()
+    {
+        return $this->base * $this->alto * $this->ancho;
+    }
+
 }

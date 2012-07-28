@@ -1,3 +1,6 @@
+{% extends '::almacen.html.twig' %}
+
+{% block article %}
 <h1>Caja creation</h1>
 
 <form action="{{ path('almacen_caja_create') }}" method="post" {{ form_enctype(form) }}>
@@ -14,3 +17,6 @@
         </a>
     </li>
 </ul>
+
+
+{% endblock %}

@@ -27,6 +27,11 @@
         </ul>
     </nav>
 </header>
+
+{% if app.session.hasFlash('info') %}
+    <p class="info">{{ app.session.getFlash('info') }}</p>
+{% endif %}
+
 <article>
     {% block article %}{% endblock %}
 </article>

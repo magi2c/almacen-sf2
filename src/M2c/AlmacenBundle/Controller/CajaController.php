@@ -20,6 +20,7 @@ class CajaController extends Controller
      */
     public function indexAction()
     {
+
         $peticion = $this->getRequest();
         $filter_arr = array();
 
@@ -94,6 +95,10 @@ class CajaController extends Controller
             $em->persist($entity);
             $em->flush();
 
+            $this->get('session')->setFlash('info',
+                'La caja tiene un Volumen de '.$entity->getVolumen()
+            );
+
             return $this->redirect($this->generateUrl('almacen_caja_show', array('id' => $entity->getId())));
         }
 
@@ -152,6 +157,9 @@ class CajaController extends Controller
             $em->persist($entity);
             $em->flush();
 
+            $this->get('session')->setFlash('info',
+                'La caja tiene un Volumen de '.$entity->getVolumen()
+            );
             return $this->redirect($this->generateUrl('almacen_caja_edit', array('id' => $id)));
         }
 
