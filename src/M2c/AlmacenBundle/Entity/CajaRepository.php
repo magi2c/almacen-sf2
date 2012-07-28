@@ -18,7 +18,8 @@ class CajaRepository extends EntityRepository
         foreach ($filter_arr as $key => $value) {
             switch ($key) {
                 case "secciones";
-                    $sql_str .= " AND se.id = :secciones"; //ToDO multiselect
+                    if(!empty($value))
+                        $sql_str .= " AND se.id = :secciones"; //ToDO multiselect
                     break;
 
             }
@@ -29,7 +30,8 @@ class CajaRepository extends EntityRepository
         foreach ($filter_arr as $key => $value) {
             switch ($key) {
                 case "secciones";
-                    $consulta->setParameter($key, $value);
+                    if(!empty($value))
+                        $consulta->setParameter($key, $value);
                     break;
 
             }

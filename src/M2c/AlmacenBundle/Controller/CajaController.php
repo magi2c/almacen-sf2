@@ -21,6 +21,7 @@ class CajaController extends Controller
     public function indexAction()
     {
         $peticion = $this->getRequest();
+        $filter_arr = array();
 
         if ($peticion->getMethod() == 'POST') {
             $filter_arr =  $peticion->request->get('m2c_almacenbundle_cajafiltertype');
