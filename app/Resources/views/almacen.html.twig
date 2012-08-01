@@ -1,17 +1,15 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-<link href="{{ asset('Resources/bootstrap/css/bootstrap.min.css.css') }}" rel="stylesheet"
+<link href="{{ asset('bundles/almacen/css/bootstrap.min.css') }}" rel="stylesheet"
       type="text/css" />
-<link href="{{ asset('Resources/bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet"
-      type="text/css" />
-<link href="{{ asset('bundles/tienda/css/backend.css') }}" rel="stylesheet"
+<link href="{{ asset('bundles/almacen/css/bootstrap-responsive.min.css') }}" rel="stylesheet"
       type="text/css" />
 {% endblock %}
 
 
 {% block javascripts %}
-{% javascripts 'Resources/bootstrap/js/bootstrap.min.js' output='js/frontend.js' %}
+{% javascripts '@AlmacenBundle/Resources/public/js/bootstrap.min.js' output='js/frontend.js' %}
 <script src="{{ asset_url }}" type="text/javascript"></script>
 {% endjavascripts %}
 {% endblock %}
